@@ -22,7 +22,9 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".Recto"></activity>
+        <activity android:name=".Questions" />
+        <activity android:name=".main_screen" />
+        <activity android:name=".facts_page"></activity>
     </application>
 
 </manifest>

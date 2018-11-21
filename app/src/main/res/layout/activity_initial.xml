@@ -5,160 +5,136 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundinitial"
-    tools:context=".InitialPage">
+    tools:context=".InitialPage"
+    tools:layout_editor_absoluteY="25dp">
 
     <Button
         android:id="@+id/btnRecto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="104dp"
         android:fontFamily="@font/lato"
-        android:onClick="displayRecto"
+        android:onClick="displayQuestions"
         android:text="Recto"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLegarda"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/btnLegarda" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnLegarda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="141dp"
+        android:layout_marginEnd="35dp"
         android:layout_marginTop="104dp"
         android:fontFamily="@font/lato"
+        android:onClick="displayQuestions"
         android:text="Legarda"
-        app:layout_constraintStart_toEndOf="@+id/btnRecto"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnPureza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/lato"
+        android:onClick="displayQuestions"
         android:text="PUREZA"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnRecto"
         app:layout_constraintTop_toBottomOf="@+id/btnRecto" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnVMapa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="35dp"
-        android:layout_marginStart="141dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/lato"
+        android:onClick="displayQuestions"
         android:text="V. MAPA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintStart_toStartOf="@+id/btnLegarda"
+        app:layout_constraintTop_toBottomOf="@+id/btnLegarda" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnJRuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/lato"
+        android:onClick="displayQuestions"
         android:text="J. RUIZ"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintStart_toStartOf="@+id/btnPureza"
+        app:layout_constraintTop_toBottomOf="@+id/btnPureza" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnGilmore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="35dp"
-        android:layout_marginStart="141dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/lato"
+        android:onClick="displayQuestions"
         android:text="GILMORE"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintStart_toStartOf="@+id/btnVMapa"
+        app:layout_constraintTop_toBottomOf="@+id/btnVMapa" />
 
     <Button
-        android:id="@+id/button7"
-        android:layout_width="88dp"
+        android:id="@+id/btnBelmonte"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/lato"
+        android:onClick="displayQuestions"
         android:text="BETTY GO\n BELMONTE"
         android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnAnonas"
+        app:layout_constraintEnd_toEndOf="@+id/btnJRuiz"
+        app:layout_constraintStart_toStartOf="@+id/btnJRuiz"
+        app:layout_constraintTop_toTopOf="@+id/btnJRuiz" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnCubao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="35dp"
-        android:layout_marginStart="139dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/lato"
+        android:onClick="displayQuestions"
         android:text="CUBAO"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintStart_toStartOf="@+id/btnGilmore"
+        app:layout_constraintTop_toBottomOf="@+id/btnGilmore" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btnAnonas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="191dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="8dp"
         android:fontFamily="@font/lato"
+        android:onClick="displayQuestions"
         android:text="ANONAS"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintBottom_toBottomOf="@+id/btnKatipunan"
+        app:layout_constraintStart_toStartOf="@+id/btnBelmonte"
+        app:layout_constraintTop_toTopOf="@+id/btnKatipunan" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/btnKatipunan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="191dp"
         android:layout_marginEnd="35dp"
-        android:layout_marginStart="139dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/lato"
+        android:onClick="displayQuestions"
         android:text="KATIPUNAN"
         android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button9"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCubao" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/btnSantolan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="143dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginStart="19dp"
         android:fontFamily="@font/lato"
+        android:onClick="displayQuestions"
         android:text="SANTOLAN"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnJRuiz"
+        app:layout_constraintStart_toEndOf="@+id/btnJRuiz" />
 
-    <Button
-        android:id="@+id/chooseLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="139dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/lato"
-        android:onClick="displayMap"
-        android:text="CHOOSE USING MAPS"
-        android:textSize="8sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button11" />
 </android.support.constraint.ConstraintLayout>

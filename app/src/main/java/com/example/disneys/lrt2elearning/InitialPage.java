@@ -1,7 +1,6 @@
 package com.example.disneys.lrt2elearning;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,18 +15,42 @@ public class InitialPage extends AppCompatActivity {
         startService(i);
     }
 
-    //choose location on google maps
-    public void displayMap(View v){
-        Intent i = null;
-        if(v.getId()==R.id.chooseLocation){
-            i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse("geo:0,0?q=lrt2"));
-            startActivity(i);
+    public void displayQuestions(View v){
+        String station = "no station";
+        switch(v.getId()){
+            case R.id.btnRecto:
+                station = "Recto";
+                break;
+            case R.id.btnLegarda:
+                station = "Legarda";
+                break;
+            case R.id.btnPureza:
+                station = "Pureza";
+                break;
+            case R.id.btnVMapa:
+                station = "V.Mapa";
+                break;
+            case R.id.btnJRuiz:
+                station = "J.Ruiz";
+                break;
+            case R.id.btnGilmore:
+                station = "Legarda";
+                break;
+            case R.id.btnBelmonte:
+                station = "Belmonte";
+                break;
+            case R.id.btnCubao:
+                station = "Cubao";
+                break;
+            case R.id.btnAnonas:
+                station = "Anonas";
+                break;
+            case R.id.btnSantolan:
+                station = "Santolan";
+                break;
         }
-    }
-
-    public void displayRecto(View v){
-        Intent i = new Intent(this,Recto.class);
+        Intent i = new Intent(this,Questions.class);
+        i.putExtra("station", station);
         startActivity(i);
     }
 }
