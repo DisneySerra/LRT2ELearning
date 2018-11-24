@@ -25,4 +25,9 @@ public class InitialPage extends AppCompatActivity {
             startActivity(i);
         }
     }
+
+    public void displayRecto(View v){
+        Intent i = new Intent(this,Recto.class);
+        startActivity(i);
+    }
 }

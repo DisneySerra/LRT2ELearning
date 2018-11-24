@@ -8,12 +8,13 @@
     tools:context=".InitialPage">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnRecto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="104dp"
         android:fontFamily="@font/lato"
+        android:onClick="displayRecto"
         android:text="Recto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +27,7 @@
         android:layout_marginTop="104dp"
         android:fontFamily="@font/lato"
         android:text="Legarda"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/btnRecto"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -38,7 +39,7 @@
         android:fontFamily="@font/lato"
         android:text="PUREZA"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRecto" />
 
     <Button
         android:id="@+id/button4"
