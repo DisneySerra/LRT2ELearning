@@ -117,7 +117,7 @@ public class Questions extends AppCompatActivity {
                 break;
         }
         tQuestion.setText(question);
-        tScore.setText("Your Score: " + qal.getPoints());
+        tScore.setText("Question");
         bA.setText(a);
         bB.setText(b);
         bC.setText(c);
@@ -129,6 +129,7 @@ public class Questions extends AppCompatActivity {
         Button b = (Button) v;
         String btnText = b.getText().toString();
         Bundle extras = getIntent().getExtras();
+        String Answer = "null";
         String value = null;
         if (extras != null) {
             value = extras.getString("station");
@@ -137,82 +138,121 @@ public class Questions extends AppCompatActivity {
             case "Recto":
                 if(btnText.equals(qal.answer1)) {
                     qal.points += 1;
+                    Answer="Correct!";
                     qal.setPoints(qal.points);
-                }else
+                }else {
                     qal.points -= 1;
+                Answer = "Incorrect";
+                }
                 break;
             case "Legarda":
                 if(btnText.equals(qal.answer2)) {
                     qal.points += 1;
+                    Answer="Correct!";
                     qal.setPoints(qal.points);
-                }else
+                }else {
                     qal.points -= 1;
+                Answer = "Incorrect";
+                }
                 break;
             case "Pureza":
                 if(btnText.equals(qal.answer3)) {
                     qal.points += 1;
+                    Answer="Correct!";
                     qal.setPoints(qal.points);
-                }else
+                }else {
                     qal.points -= 1;
+                Answer = "Incorrect";
+                }
                 break;
             case "V.Mapa":
                 if(btnText.equals(qal.answer4)) {
                     qal.points += 1;
+                    Answer="Correct!";
                     qal.setPoints(qal.points);
-                }else
+                }else {
                     qal.points -= 1;
+                Answer = "Incorrect";
+                }
                 break;
             case "J.Ruiz":
                 if(btnText.equals(qal.answer5)) {
                     qal.points += 1;
+                    Answer="Correct!";
                     qal.setPoints(qal.points);
-                }else
+                }else {
                     qal.points -= 1;
+                Answer = "Incorrect";
+                }
                 break;
             case "Gilmore":
                 if(btnText.equals(qal.answer6)) {
                     qal.points += 1;
+                    Answer="Correct!";
                     qal.setPoints(qal.points);
-                }else
+                }else {
                     qal.points -= 1;
+                Answer = "Incorrect";
+                }
                 break;
             case "Belmonte":
                 if(btnText.equals(qal.answer7)) {
                     qal.points += 1;
+                    Answer="Correct!";
                     qal.setPoints(qal.points);
-                }else
+                }else {
                     qal.points -= 1;
+                Answer = "Incorrect";
+                }
                 break;
             case "Cubao":
                 if(btnText.equals(qal.answer8)) {
                     qal.points += 1;
+                    Answer="Correct!";
                     qal.setPoints(qal.points);
-                }else
+                }else {
                     qal.points -= 1;
+                Answer = "Incorrect";
+                }
                 break;
             case "Anonas":
                 if(btnText.equals(qal.answer9)) {
                     qal.points += 1;
+                    Answer="Correct!";
                     qal.setPoints(qal.points);
-                }else
+                }else {
                     qal.points -= 1;
+                Answer = "Incorrect";
+                }
                 break;
             case "Katipunan":
                 if(btnText.equals(qal.answer10)) {
                     qal.points += 1;
+                    Answer="Correct!";
                     qal.setPoints(qal.points);
-                }else
+                }else {
                     qal.points -= 1;
+                Answer = "Incorrect";
+                }
                 break;
             case "Santolan":
                 if(btnText.equals(qal.answer11)) {
                     qal.points += 1;
+                    Answer="Correct!";
                     qal.setPoints(qal.points);
-                }else
+                }else {
                     qal.points -= 1;
+                Answer = "Incorrect";
+                }
                 break;
         }
-       tScore.setText("Your Points: " + qal.getPoints());
+       tScore.setText(Answer);
+        Toast.makeText(this,Answer, Toast.LENGTH_LONG).show();
+        if(Answer .equals("Correct!"))
+        {
+            Intent i = new Intent(this,InitialPage.class);
+            startActivity(i);
+        }
     }
 
     public void checkScore(View v){

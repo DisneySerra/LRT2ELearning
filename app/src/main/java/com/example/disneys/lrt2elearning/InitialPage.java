@@ -53,4 +53,10 @@ public class InitialPage extends AppCompatActivity {
         i.putExtra("station", station);
         startActivity(i);
     }
+
+    public void facts (View v){
+
+        Intent i = new Intent(this,facts_page.class);
+        startActivity(i);
+    }
 }

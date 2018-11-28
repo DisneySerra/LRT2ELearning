@@ -137,4 +137,19 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/btnJRuiz"
         app:layout_constraintStart_toEndOf="@+id/btnJRuiz" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="110dp"
+        android:onClick="facts"
+        android:text="More Facts about LRT 2 stations"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAnonas" />
+
 </android.support.constraint.ConstraintLayout>
